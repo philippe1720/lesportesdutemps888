@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Mystical Elegant Palette */
+  /* Deep Indigo Background */
+  --background: 265 45% 10%;
+  --foreground: 45 30% 90%; /* Soft off-white/gold tint */
+
+  /* Gold/Amber Accents */
+  --primary: 43 70% 60%;
+  --primary-foreground: 265 45% 10%;
+
+  /* Lighter purple for cards/layers */
+  --card: 265 40% 15%;
+  --card-foreground: 45 30% 90%;
+
+  --popover: 265 40% 15%;
+  --popover-foreground: 45 30% 90%;
+
+  --secondary: 270 30% 25%;
+  --secondary-foreground: 45 30% 90%;
+
+  --muted: 265 20% 20%;
+  --muted-foreground: 265 20% 60%;
+
+  --accent: 43 70% 60%;
+  --accent-foreground: 265 45% 10%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 45 30% 90%;
+
+  --border: 265 30% 25%;
+  --input: 265 30% 25%;
+  --ring: 43 70% 60%;
+
+  --radius: 0.5rem;
+
+  /* Typography Variables */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.15) 0%, transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(217, 119, 6, 0.1) 0%, transparent 25%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply tracking-wide;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    @apply text-primary;
+  }
+  .bg-gold {
+    @apply bg-primary;
+  }
+  .border-gold {
+    @apply border-primary;
+  }
+  
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-md border border-white/5 shadow-xl;
+  }
+  
+  .mystical-glow {
+    box-shadow: 0 0 20px -5px rgba(234, 179, 8, 0.3);
+  }
+}
