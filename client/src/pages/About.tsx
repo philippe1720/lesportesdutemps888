@@ -34,11 +34,7 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-[3/4] rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
-              <img 
-                src={philippePhoto} 
-                alt="Philippe Niard" 
-                className="w-full h-full object-cover"
-              />
+              
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
                 <h3 className="font-serif text-2xl font-bold text-white">Philippe Niard</h3>
